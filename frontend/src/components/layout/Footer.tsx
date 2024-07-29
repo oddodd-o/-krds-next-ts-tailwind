@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import tw from 'twin.macro';
-import { commonStyle } from '@/styles/commonStyle';
+import { globalStyles } from '@/styles/globalStyle';
 
 const Footer = () => {
     return (
@@ -144,7 +144,6 @@ const footerContainer = css`
     .foot-quick {
         ${tw`bg-white border-t border-b border-gray-300`}
         .inner {
-            ${tw`flex flex-col`}
             .link {
                 ${tw`flex items-center justify-between flex-1 gap-2 px-6 border-r border-gray-300 h-14`}
                 &:first-child {
@@ -165,8 +164,8 @@ const footerContainer = css`
         }
     }
     > .inner {
-        ${tw`flex flex-col items-start`}
-        ${commonStyle}
+        ${tw`flex flex-col items-start gap-8 py-8`}
+        ${globalStyles}
     }
     .f-logo {
         ${tw`h-12`}
@@ -198,32 +197,32 @@ const footerContainer = css`
                 a {
                     ${tw`inline-flex w-10 h-10 bg-center bg-no-repeat bg-contain`}
                     &.instagram {
-                        background-image: url('/pattern/layout/foot_ico_sns_Instagram.svg');
+                        background-image: url('/images/pattern/layout/foot_ico_sns_Instagram.svg');
                     }
                     &.youtube {
-                        background-image: url('/pattern/layout/foot_ico_sns_youtube.svg');
+                        background-image: url('/images/pattern/layout/foot_ico_sns_youtube.svg');
                     }
                     &.twitter {
-                        background-image: url('/pattern/layout/foot_ico_sns_twitter.svg');
+                        background-image: url('/images/pattern/layout/foot_ico_sns_twitter.svg');
                     }
                     &.facebook {
-                        background-image: url('/pattern/layout/foot_ico_sns_facebook.svg');
+                        background-image: url('/images/pattern/layout/foot_ico_sns_facebook.svg');
                     }
                     &.blog {
-                        background-image: url('/pattern/layout/foot_ico_sns_blog.svg');
+                        background-image: url('/images/pattern/layout/foot_ico_sns_blog.svg');
                     }
                 }
             }
         }
     }
     .f-btm {
-        ${tw`flex flex-col gap-6 pt-2 border-t border-gray-300`}
+        ${tw`flex flex-col w-full gap-6 pt-8 border-t border-gray-300`}
         .f-btm-text {
-            ${tw`flex items-center justify-between gap-4`}
+            ${tw`flex flex-col items-start justify-between gap-4`}
             .f-menu {
-                ${tw`flex flex-wrap`}
+                ${tw`flex flex-wrap gap-x-6 gap-y-4`}
                 a {
-                    ${tw`inline-flex items-center h-10 px-4`}
+                    ${tw`inline-flex text-body-sm`}
                     &.point {
                         ${tw`font-bold text-secondary`}
                     }
@@ -236,15 +235,15 @@ const footerContainer = css`
                 }
             }
             .f-copy {
-                ${tw`text-sm text-gray-700`}
+                ${tw`text-gray-700 text-body-sm`}
             }
         }
         .f-btm-ban {
-            ${tw`flex items-center px-4 bg-white rounded-md min-h-10`}
+            ${tw`flex items-center px-4 bg-white rounded-md min-h-10 text-body-sm`}
             &::before {
-                ${tw`inline-flex flex-shrink-0 w-1 h-6 mr-2 bg-center bg-no-repeat bg-contain`}
+                ${tw`inline-flex flex-shrink-0 mr-2 bg-center bg-white bg-no-repeat bg-contain w-[7.2rem] min-h-[4rem]`}
                 content: '';
-                background-image: url('/pattern/content/btm_ban_ico_flag.svg');
+                background-image: url('/images/pattern/content/btm_ban_ico_flag.svg');
             }
         }
     }

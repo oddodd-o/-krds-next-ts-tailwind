@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import tw, { theme, globalStyles as baseStyles } from 'twin.macro';
 
 export const globalStyles = css([
-    baseStyles,
+    // baseStyles,
     {
         body: {
             ...tw`antialiased`,
@@ -10,8 +10,8 @@ export const globalStyles = css([
         },
     },
     css`
-        .container {
-            ${tw`w-full max-w-screen-xl px-8 mx-auto`}
+        .inner {
+            ${tw`w-full max-w-screen-xl px-4 mx-auto`}
         }
     `,
 ]);
