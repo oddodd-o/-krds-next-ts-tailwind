@@ -1,4 +1,4 @@
-# KRDS 스타일 가이드를 활용한 프로젝트
+# KRDS UIUX 적용 NETX.js, ts, tailwind 템플릿
 
 ## 1. 프로젝트 소개
 
